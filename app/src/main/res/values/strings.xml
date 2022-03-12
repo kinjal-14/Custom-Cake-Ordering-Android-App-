@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CakeDream</string>
+
+
+    // splash screen
+    <string name="background_image">backgroundimage</string>
+    <string name="background_text">FRESH FROM THE OVEN</string>
+
+    // login
+    <string name="login_text">LOGIN</string>
+    <string name="home_logo">CAKE DREAMS</string>
+
+    // signup
+    <string name="signup_text">SIGN-UP</string>
+    <string name="Register">Register</string>
+</resources>
