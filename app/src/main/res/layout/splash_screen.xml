@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:background="@drawable/splash_background">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+
     <ImageView
+        android:id="@+id/app_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="255dp"
+        android:layout_marginTop="100sp"
         android:contentDescription="@string/background_image"
+        android:layout_centerInParent="true"
         android:src="@drawable/logo_img">
 
     </ImageView>
@@ -21,14 +20,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="100sp"
         android:fontFamily="@font/poppins_extrabold"
         android:text="@string/background_text"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/app_icon"
+        android:layout_centerInParent="true"
         android:textColor="@color/white"
         android:textSize="33sp"
         android:textStyle="bold">
 
     </TextView>
-</LinearLayout>
-</ScrollView>
+</RelativeLayout>
