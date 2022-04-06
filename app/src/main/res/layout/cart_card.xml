@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="5dp"
+        android:foreground="@drawable/round_bordered_btn"
+        android:backgroundTint="#E5E5E5"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="145dp"
+                android:padding="5dp"
+                app:cardCornerRadius="10dp"
+                android:background="@drawable/button"
+                android:layout_gravity="start">
+
+                <ImageView
+                    android:id="@+id/cart_product_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/home_cake_img">
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/cake_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="cake name"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/black">
+
+                </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Qty:"
+                    android:textSize="16dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/black">
+                </TextView>
+
+                <ImageButton
+                    android:id="@+id/qty_remove"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/round_bordered_btn"
+                    android:src="@drawable/remove_icon">
+                </ImageButton>
+
+                <TextView
+                    android:id="@+id/qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="1"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/black">
+                </TextView>
+
+                <ImageButton
+                    android:id="@+id/qty_add"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/round_bordered_btn"
+                    android:src="@drawable/add_icon">
+                </ImageButton>
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price:"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/black">
+                </TextView>
+                    <TextView
+                        android:id="@+id/cart_card_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="100"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black"></TextView>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:id="@+id/cart_remove"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/round_bordered_btn"
+                        android:src="@drawable/delete_icon"
+                        android:text="remove">
+
+                    </ImageButton>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
