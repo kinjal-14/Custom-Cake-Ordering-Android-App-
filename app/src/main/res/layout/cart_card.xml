@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cart_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -24,8 +25,8 @@
             android:padding="10dp">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="145dp"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
                 android:padding="5dp"
                 app:cardCornerRadius="10dp"
                 android:background="@drawable/button"
@@ -51,7 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="cake name"
-                    android:textSize="20dp"
+                    android:textSize="16dp"
                     android:fontFamily="@font/poppins"
                     android:textColor="@color/black">
 
@@ -65,76 +66,64 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Qty:"
-                    android:textSize="16dp"
+                    android:textSize="14dp"
                     android:layout_gravity="center"
                     android:fontFamily="@font/poppins"
                     android:textColor="@color/black">
                 </TextView>
 
-                <ImageButton
-                    android:id="@+id/qty_remove"
-                    android:layout_marginStart="10dp"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/round_bordered_btn"
-                    android:src="@drawable/remove_icon">
-                </ImageButton>
 
                 <TextView
                     android:id="@+id/qty"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="10dp"
                     android:text="1"
-                    android:textSize="20dp"
+                    android:textSize="14dp"
                     android:fontFamily="@font/poppins"
                     android:textColor="@color/black">
                 </TextView>
 
-                <ImageButton
-                    android:id="@+id/qty_add"
-                    android:layout_marginStart="8dp"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/round_bordered_btn"
-                    android:src="@drawable/add_icon">
-                </ImageButton>
             </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Price:"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/poppins"
-                    android:textColor="@color/black">
-                </TextView>
-                    <TextView
-                        android:id="@+id/cart_card_price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:text="100"
-                        android:textSize="16dp"
-                        android:fontFamily="@font/poppins"
-                        android:textColor="@color/black"></TextView>
-                </LinearLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp">
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:text="Price: $"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/cart_card_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/tv1"
+                       android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:text="100"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black">
+
+                    </TextView>
 
                     <ImageButton
                         android:id="@+id/cart_remove"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:clickable="true"
-                        android:focusable="true"
                         android:layout_alignParentEnd="true"
                         android:background="@drawable/round_bordered_btn"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:src="@drawable/delete_icon"
                         android:text="remove">
 
