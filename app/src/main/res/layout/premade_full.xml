@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Pre-Made Cakes"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:layout_toStartOf="@+id/cart"
+            android:layout_toEndOf="@+id/home_icon"></TextView>
+
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/cart_icon"
+            android:background="@drawable/button">
+
+        </ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+
+       <Spinner
+           android:id="@+id/sort_filter"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+       </Spinner>
+
+    </LinearLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/gift_recyclerView"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+
+        </GridLayout>
+    </LinearLayout>
+</FrameLayout>
