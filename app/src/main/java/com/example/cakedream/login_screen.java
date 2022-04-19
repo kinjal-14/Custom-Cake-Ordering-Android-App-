@@ -4,6 +4,7 @@ package com.example.cakedream;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -19,9 +20,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.EmailAuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Locale;
 import java.util.Objects;
 
 public class login_screen extends AppCompatActivity {
@@ -34,8 +37,10 @@ public class login_screen extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
+    String Email, Password;
 
     ProgressDialog progressDialog;
+    String uid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +58,12 @@ public class login_screen extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
 
+        if (mUser != null) {
+            uid = mUser.getUid();
+        }else {
+            uid = null;
+        }
+
 
         loginBtn.setOnClickListener(v -> PerLogAuth());
 
@@ -61,11 +72,13 @@ public class login_screen extends AppCompatActivity {
             startActivity(intent);
         });
 
+
+
     }
 
         private void PerLogAuth() {
-            String Email= Objects.requireNonNull(email.getText()).toString();
-            String Password= Objects.requireNonNull(password.getText().toString());
+            Email = Objects.requireNonNull(email.getText()).toString();
+            Password = Objects.requireNonNull(password.getText().toString());
 
             if (!Email.matches(emailPattern)){
                 email.setError("enter valid email address");
@@ -81,12 +94,12 @@ public class login_screen extends AppCompatActivity {
                 progressDialog.setTitle("Login");
                 progressDialog.setCanceledOnTouchOutside(false);
                 progressDialog.show();
-                mAuth.signInWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                mAuth.signInWithEmailAndPassword(Email.toString(),Password.toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            progressDialog.dismiss();
                             sendUserToNextActivity();
+                            progressDialog.dismiss();
                             Toast.makeText(login_screen.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         }
                         else {
@@ -98,9 +111,15 @@ public class login_screen extends AppCompatActivity {
             }
         }
     private void sendUserToNextActivity() {
-        Intent intent= new Intent(login_screen.this,pre_made_base.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+        uid = mAuth.getCurrentUser().getUid();
+        Log.d("uid", uid);
+        if (uid.toString().equals("REn0sCTlVTZshNTa1yBMDW0mtbE2") && email.getText().toString().equals("admin@gmail.com") && password.getText().toString().equals("Admin@1234")) {
+            Intent intn = new Intent(login_screen.this, admin_home.class);
+            startActivity(intn);
+        } else {
+            Intent intent = new Intent(login_screen.this, pre_made_base.class);
+            startActivity(intent);
+        }
     }
 
 }
