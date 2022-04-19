@@ -32,7 +32,7 @@ public class pre_made_base extends AppCompatActivity {
     Button premadehome, customize;
     TextView premade,username;
     RecyclerView recyclerView;
-    ImageView account;
+    ImageView account,cart_icon;
     ArrayList<productData> productItemData;
     LinearLayoutManager linearLayoutManager;
     preMadeHomeAdapter preMadeHomeAdapter;
@@ -58,7 +58,6 @@ public class pre_made_base extends AppCompatActivity {
         }
 
         recyclerView = findViewById(R.id.pre_made_slider);
-        firebaseFirestore = FirebaseFirestore.getInstance();
         productItemData = new ArrayList<productData>();
 
         premadehome = findViewById(R.id.pre_made_home);
@@ -68,6 +67,7 @@ public class pre_made_base extends AppCompatActivity {
         username = findViewById(R.id.userName);
 
         account = findViewById(R.id.home_icon);
+        cart_icon = findViewById(R.id.cart_icon);
 
         setProductInformation();
         premadehome.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +76,8 @@ public class pre_made_base extends AppCompatActivity {
                 if(uid != null){
                     Intent intent = new Intent(v.getContext(), pre_made_full_screen.class);
                     startActivity(intent);
-                }else {
+                }
+                else {
                     Intent intent = new Intent(v.getContext(), login_screen.class);
                     startActivity(intent);
                 }
@@ -100,12 +101,42 @@ public class pre_made_base extends AppCompatActivity {
                 if(uid != null){
                     Intent intent = new Intent(v.getContext(), account_screen.class);
                     startActivity(intent);
-                }else {
+                }
+                else {
                     Intent intent = new Intent(v.getContext(), login_screen.class);
                     startActivity(intent);
                 }
             }
         });
+
+        customize.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(uid != null){
+                    Intent intent = new Intent(v.getContext(), customizeCreate.class);
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(v.getContext(), login_screen.class);
+                    startActivity(intent);
+                }
+
+            }
+        });
+
+        cart_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(uid != null){
+                    Intent intent = new Intent(v.getContext(), cart_screen.class);
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(v.getContext(), login_screen.class);
+                    startActivity(intent);
+                }
+
+            }
+        });
+
 
     }
 
@@ -152,6 +183,7 @@ public class pre_made_base extends AppCompatActivity {
                             assert data != null;
                             String type = data.getType();
                             productItemData.add(data);
+                            Log.d("data", String.valueOf(data));
                         }
                     }else {
                         Toast.makeText(this, "Cakes are not avalible for this time", Toast.LENGTH_SHORT).show();

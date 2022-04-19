@@ -3,6 +3,7 @@ package com.example.cakedream.pre_made_Adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +65,8 @@ public class preMadeHomeAdapter  extends RecyclerView.Adapter<preMadeHomeAdapter
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), product_detail.class);
                 intent.putExtra("ProductId",productItemData.get(position).getId());
+                intent.putExtra("cake_image",productItemData.get(position).getImage());
+                intent.putExtra("cake_price1",productItemData.get(position).getPrice());
                 v.getContext().startActivity(intent);
             }
         });
