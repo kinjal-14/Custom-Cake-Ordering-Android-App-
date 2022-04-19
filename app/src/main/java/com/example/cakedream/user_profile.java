@@ -92,6 +92,13 @@ public class user_profile extends AppCompatActivity {
         passwordsavebtn.setOnClickListener(v -> updatepassword());
 
         backbtn.setOnClickListener(v -> onBackPressed());
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(user_profile.this,account_screen.class);
+                startActivity(intent);
+            }
+        });
 
         logout.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();

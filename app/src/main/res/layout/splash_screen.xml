@@ -10,14 +10,15 @@
         android:id="@+id/app_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_marginTop="100sp"
         android:contentDescription="@string/background_image"
-        android:layout_centerInParent="true"
         android:src="@drawable/logo_img">
 
     </ImageView>
 
     <TextView
+        android:id="@+id/app_line"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_extrabold"
