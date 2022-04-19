@@ -84,7 +84,7 @@ public class cartAdapter extends RecyclerView.Adapter<cartAdapter.MyViewHolder>{
         firestore.collection("users").document(uid).collection("cart").document(productid)
                 .delete()
                 .addOnSuccessListener(unused -> {
-                    Toast.makeText(context, "Item removed From Favourite successfully!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Item removed From Cart successfully!", Toast.LENGTH_SHORT).show();
                     ((cart_screen) context).reloadActivity();
                 })
                 .addOnFailureListener(e -> Log.w("error", e.toString()));

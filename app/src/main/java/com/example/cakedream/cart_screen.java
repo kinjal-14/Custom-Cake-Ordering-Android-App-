@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -40,6 +41,7 @@ public class cart_screen extends AppCompatActivity {
     cartAdapter cartAdapter;
     FirebaseFirestore firestore;
     String uid;
+    ImageView home_btn;
     double subtotal = 0.0;
     private RecyclerView cartRecycleView;
     
@@ -66,6 +68,15 @@ public class cart_screen extends AppCompatActivity {
         recyclerView1 = findViewById(R.id.cart_recyclerview);
 
         checkOutButton = findViewById(R.id.checkout_btn);
+
+        home_btn= findViewById(R.id.home_btn);
+        home_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(cart_screen.this,pre_made_base.class);
+                startActivity(intent);
+            }
+        });
 
 
         setData();
