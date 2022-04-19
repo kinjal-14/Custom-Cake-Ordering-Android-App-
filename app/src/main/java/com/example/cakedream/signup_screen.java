@@ -47,7 +47,7 @@ public class signup_screen extends AppCompatActivity {
     private FirebaseFirestore firestore;
     private String uId;
     ProgressDialog progressDialog;
-    private static final int RC_SIGN_IN = 120;
+    private static final int RC_SIGN_IN = 1000;
 
     private GoogleSignInClient mGoogleSignInClient;
 
