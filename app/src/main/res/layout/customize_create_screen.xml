@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/app_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/customize_home">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp">
+
+                <ImageView
+                    android:id="@+id/home1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/button"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:src="@drawable/home_icon"></ImageView>
+
+                <ImageView
+                    android:id="@+id/cart_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/button"
+                    android:src="@drawable/cart_icon"></ImageView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_marginTop="63dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Customize Cake"
+                android:textColor="@color/white"
+                android:textSize="30dp">
+            </TextView>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text"
+                android:layout_marginTop="36dp"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/type"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/button"
+                        android:text="Type"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/shape"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/button"
+                        android:text="Shape"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/size"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/button"
+                        android:text="Size"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/flavour"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/button"
+                        android:text="Flavour"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/design"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/button"
+                        android:text="Design"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white">
+                    </TextView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="380dp">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/continue_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/button"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textSize="20dp" >
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
