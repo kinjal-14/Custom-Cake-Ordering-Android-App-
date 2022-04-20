@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/admin_canceled_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:focusable="true"
+        android:foreground="@drawable/round_bordered_btn"
+        app:cardBackgroundColor="@color/app_background"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/cart_product_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/admin_cancelled_card"></ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Order id:"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"></TextView>
+
+
+                    <TextView
+                        android:id="@+id/processing_orderid2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="1454564565"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"></TextView>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="Total: "
+                        android:textColor="@color/black"
+                        android:textSize="14dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/processing_price2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/price"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="200"
+                        android:textColor="@color/black"
+                        android:textSize="14dp">
+
+                    </TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="Orderes on: "
+                        android:textColor="@color/black"
+                        android:textSize="14dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/processing_placed2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/tv1"
+                        android:fontFamily="@font/poppins"
+                        android:gravity=""
+                        android:text="March 14, 2021"
+                        android:textColor="@color/black"
+                        android:textSize="14dp">
+
+                    </TextView>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
