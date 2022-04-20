@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="10dp">
+
+        <ImageView
+            android:id="@+id/back_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:src="@drawable/back_button"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/admin_orders"
+            android:layout_toEndOf="@+id/back_button2"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="DASHBOARD"
+            android:textColor="@color/black"
+            android:textSize="24dp"></TextView>
+
+        <ImageView
+            android:id="@+id/admin_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button"
+            android:src="@drawable/admin_order_icon">
+
+        </ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/relative1"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/o1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="ORDER"
+                android:textColor="@color/pink"
+                android:textSize="25dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="ORDER"
+                android:textColor="@color/pink"
+                android:textSize="25dp">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="STATUS"
+                android:textColor="@color/black"
+                android:textSize="25dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/order_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="NEW"
+                android:textColor="@color/black"
+                android:textSize="25dp">
+
+            </TextView>
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_bordered_btn"
+            android:backgroundTint="@color/app_background"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Customer information"
+                  android:layout_marginStart="20dp"
+                  android:fontFamily="@font/poppins_semibold"
+                  android:textSize="15dp"
+                  android:textColor="@color/black">
+              </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full Name:"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="13dp">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/order_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Krinesh Patel"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="13dp">
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact:"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="13dp">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/order_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+1 (323) 232 2424"
+                        android:layout_marginStart="28dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="13dp">
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email:"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="13dp">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/order_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="krinesh@gmail.com"
+                        android:layout_marginStart="44dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="13dp">
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address:"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="13dp">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/order_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5550 ave trent,Cote-Saint-Luc,H4W 2b9"
+                        android:layout_marginStart="27dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="13dp">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/black">
+
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cake information"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="15dp"
+                    android:textColor="@color/black">
+                </TextView>
+                <LinearLayout
+                    android:id="@+id/with_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/admin_orders_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Subtotal:"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="15dp">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/subtotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="13dp">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        </ScrollView>
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:layout_margin="20dp">
+
+             <androidx.appcompat.widget.AppCompatButton
+                 android:id="@+id/order_confirm"
+                 android:layout_width="150dp"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentStart="true"
+                 android:background="@drawable/round_bordered_btn"
+                 android:backgroundTint="@color/pink"
+                 android:elevation="5dp"
+                 android:text="Confirm"
+                 android:textSize="20dp">
+
+             </androidx.appcompat.widget.AppCompatButton>
+
+             <androidx.appcompat.widget.AppCompatButton
+                 android:id="@+id/order_cancel"
+                 android:layout_width="150dp"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentEnd="true"
+                 android:background="@drawable/round_bordered_btn"
+                 android:backgroundTint="@color/pink"
+                 android:elevation="5dp"
+                 android:text="Cancel"
+                 android:textSize="20dp">
+
+             </androidx.appcompat.widget.AppCompatButton>
+
+         </RelativeLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
