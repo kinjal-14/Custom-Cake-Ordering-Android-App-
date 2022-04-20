@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/pre_made_cake_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_weight="8"
+            android:background="@color/white"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_img" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/product_name"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="8"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:background="@drawable/btn"
+                        android:text="Item Name"
+                        android:textColor="@color/black"
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cake Description"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cake_desc"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:layout_height="wrap_content"
+                    android:text="descreption........"
+                    android:textSize="18dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/calories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Calories: "
+                        android:textSize="15dp"
+                        android:textStyle="bold"></TextView>
+
+
+                    <TextView
+                        android:id="@+id/calories1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="1dp"
+                        android:layout_toEndOf="@+id/calories"
+                        android:fontFamily="@font/poppins"
+                        android:text="310kcal"
+                        android:textSize="15dp"></TextView>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="1dp"
+                        android:layout_toStartOf="@+id/size1"
+                        android:fontFamily="@font/poppins"
+                        android:text="Size: "
+                        android:textSize="15dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/size1"
+                        android:layout_width="29dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="1 lb"
+                        android:textSize="15dp"></TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Price: "
+                        android:textSize="15dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/price1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/price"
+                        android:fontFamily="@font/poppins"
+                        android:text="$ 50"
+                        android:textSize="15dp"></TextView>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:elevation="10dp"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:src="@drawable/back_button"
+                tools:ignore="SpeakableTextPresentCheck">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/Re1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/pink">
+
+        <ImageButton
+            android:id="@+id/minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/round_button"
+            android:src="@drawable/remove_icon"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/count1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/minus"
+            android:inputType="number"
+            android:text="1"
+            android:textSize="36dp"
+            tools:ignore="TouchTargetSizeCheck">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/count1"
+            android:background="@drawable/round_button"
+            android:src="@drawable/add_icon"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="Add To Cart"
+            android:textColor="@color/white"
+            android:textSize="25dp">
+
+        </TextView>
+    </RelativeLayout>
+</RelativeLayout>
